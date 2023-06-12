@@ -20,3 +20,8 @@ Environment Setup:
 3. Match even if the different model names refer to the same model ("HYUN, ACCE" vs "HYUN, ACCENT").
 4. However, duplicates if any will be dropped.
 5. Entries follow the order of "Canonical Models".
+
+## Issues Encountered
+
+1. There was an extra space for " model" in the "Canonical Models" headers. Kept me puzzled for about 15 mins, since VSC doesn't highlight the space when you drag over it with the mouse/double-click. Checked back in the spreadsheet to find the issue.
+2. 
