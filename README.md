@@ -6,12 +6,10 @@ Language: Python
 
 Environment Setup:
 
-1. Create new virtual environment with VSC and venv
+1. Create new virtual environment with venv
 2. Activate with .venv\scripts\activate
-3. Install required packages with pip install --target=Lib\site-packages pandas 
-
-Packages:
-- pandas
+3. Install required packages
+⋅⋅* pandas
 
 
 ## Understanding and Assumptions
