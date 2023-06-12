@@ -9,7 +9,7 @@ Environment Setup:
 1. Create new virtual environment with venv
 2. Activate with .venv\scripts\activate
 3. Install required packages
-⋅⋅* pandas
+    - pandas
 
 
 ## Understanding and Assumptions
