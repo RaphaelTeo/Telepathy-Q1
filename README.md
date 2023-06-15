@@ -23,10 +23,15 @@ Environment Setup:
 
 
 ## Submission (main)
-While this interpretation achieves the expected output, it takes "Canonical Models" as the base and supplements it with additional information from the "Car Models X" sheets, even as "Car Models 2" seems to be a subset of "Car Models 1".
+While this interpretation achieves the expected output, it takes "Canonical Models" as the base and supplements it with additional data from the "Car Models X" sheets.
 
-Where there is missing information, reasonable assumptions are made.
-CHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECK
+As "Car Models 2" does not provide any additional data, we discard it.
+
+
+
+Using len(pd.unique(df_m2_renamed['model2'])), we find that the value is 85, equal to the total number of entries. This means that each model in "Car Models 2" is unique and can be used as a key.
+
+
 
 ## Submission (Interpretation 2)
 "Maximising the number of matches to Canonical Models" can simply be achieved by using each "Car Models X" sheet as the base of comparison and trying to match "Canonical Models" to their entries, which means that the "Car Models 1" and "Car Models 2" are the main working sheets that need to be checked against "Canonical Models". To put it in the context of a practical scenario, let's assume that a client has provided us with a list of car models (e.g. "Car Models 1"), and we need to ensure that its entries are correct (i.e. matches our official database of "Canonical Models").
@@ -40,3 +45,5 @@ CHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECKCHECK
 
 1. When creating the key values, the strings were forced to lowercase, and stripped (remove leading and trailing spaces). Format validation (string) is not required here since it would throw an error if the values were not strings, and it can be forced to be strings via str(x) if needed. 
 2. There was an extra space for " model" in the "Canonical Models" headers. Kept me puzzled for about 15 mins, since VSC doesn't highlight the space when you drag over it with the mouse/double-click. Checked back in the spreadsheet to find the issue.
+3. HYUN and HYD both refer to Hyundai
+4. "Car Models 1" has both a HYUN | EXCE | EXCEL, and a HYD | EXCEL | EXCEL. Which is correct? Can we trust "Car Models 2" to be correct? 
